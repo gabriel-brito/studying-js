@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<script>
+	var pulaLinha = function() {
+		document.write("<br>");
+	};
+
+	var mostra = function(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var vitorias = parseInt(prompt("Quantos jogos o CDC Futebol Clube venceu?"));
+	var empates = parseInt(prompt("Quantos jogos o CDC Futebol Clube empatou?"));
+	var calculaPontos = function(vitorias, empates) {
+		return(vitorias * 3) + empates;
+	};
+	var pontos = calculaPontos(vitorias, empates);
+
+
+	var vitorias_adversatrio = parseInt(prompt("Quantos jogos o time adversário venceu?"));
+	var empates_adversario = parseInt(prompt("Quantos jogos o time adversário empatou?"));
+	var calculaPontosAdversario = function(vitorias_adversatrio, empates_adversario){
+		return(vitorias_adversatrio * 3) + empates_adversario;
+	};
+	var pontos_adversario = calculaPontosAdversario(vitorias_adversatrio, empates_adversario);
+
+
+	if(pontos > pontos_adversario) {
+		mostra("Nosso time está indo MELHOR que o Livros Velhos!");
+	} else if(pontos == pontos_adversario) {
+		mostra("Nosso time está EMPATADO com o Livros Velhos!");
+	} else {
+		mostra("Nosso time está PIOR que o Livros Velhos!");
+	}
+
+
+</script>

@@ -12,33 +12,16 @@ var mostra = function(frase) {
 	pulaLinha();
 };
 
-</script>
+	var pesoDoUsuario = parseInt(prompt("Qual seu peso?"));
+	var alturaDoUsuario = parseInt(prompt("Qual sua altura?"));
+	function calculoImc(pesoDoUsuario, alturaDoUsuario) {
+		return pesoDoUsuario / (alturaDoUsuario * alturaDoUsuario);
+	}
+	var resultadoUsuario = calculoImc(pesoDoUsuario, alturaDoUsuario);
 
-
-
-<script>
-	
-	var peso = 75;
-	var altura = 1.72;
-	var imc = Math.round(peso / (altura * altura));
-
-	mostra("Meu IMC é: " + imc);
-
-	var pesoDoPrimo = 83;
-	var alturaDoPrimo= 1.76;
-	var imcDoPrimo = pesoDoPrimo / (alturaDoPrimo * alturaDoPrimo);
-	mostra("o IMC de meu primo é: " + imcDoPrimo);
-
-	var calculaIMC = function(altura, peso) {
-		var imc = peso / (altura * altura);
-		return imc;
+	if (resultadoUsuario < 18.5) {
+		mostra("Seu IMC indica que você está ABAIXO do peso");
+	} else if (resultadoUsuario > 35) {
+		mostra("Seu IMC indica que você está ACIMA do peso");
 	};
-
-	var imcDoPrimo = calculaIMC(alturaDoPrimo, pesoDoPrimo);
-	mostra("O imc do meu primo é: " + imcDoPrimo);
-	mostra("Ele ainda está " + (imcDoPrimo - 18.5) + " pontos acima do limite da magreza." );
-
-	mostra("Meu imc é: " + imc);
-	mostra("Ainda estou " + (imc - 18) + " acima do limite da magreza e " + (35 - imc) + " abaixo do limite de gordura" ); 
-
 </script>

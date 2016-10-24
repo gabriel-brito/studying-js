@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+
+
+<script>
+	var pulaLinha = function() {
+		document.write("<br>");
+	};
+
+	var mostra = function(frase) {
+		document.write(frase);
+		pulaLinha();
+	};
+
+
+	var numeroPensado = Math.round(Math.random() * 100);
+
+
+	if (isNaN(chute)) {
+		mostra("somente números são válidos.");
+	}
+
+	var chute = parseInt(prompt("Qual o número pensado?"));
+	if (chute == numeroPensado) {
+		mostra("Uau, você acertou! pois eu tinha pensado no " + numeroPensado);
+	} else if (chute > numeroPensado) {
+		mostra("seu número foi " + chute + " e é maior que " + numeroPensado);
+	} else if (chute < numeroPensado) {
+		mostra("Seu número foi  " + chute + " e é menor que " + numeroPensado);
+	} else {
+		mostra("Você errou! o número pensado foi " + numeroPensado);
+	};
+
+</script>

@@ -1,0 +1,5 @@
+<meta charset="UTF-8">
+
+<script>
+var pulaLinha=function(){document.write("<br>")},mostra=function(a){document.write(a),pulaLinha()},vitorias=parseInt(prompt("Quantos jogos o CDC Futebol Clube venceu?")),empates=parseInt(prompt("Quantos jogos o CDC Futebol Clube empatou?")),calculaPontos=function(a,b){return 3*a+b},pontos=calculaPontos(vitorias,empates),vitorias_adversatrio=parseInt(prompt("Quantos jogos o time adversário venceu?")),empates_adversario=parseInt(prompt("Quantos jogos o time adversário empatou?")),calculaPontosAdversario=function(a,b){return 3*a+b},pontos_adversario=calculaPontosAdversario(vitorias_adversatrio,empates_adversario);mostra(pontos>pontos_adversario?"Nosso time está indo MELHOR que o Livros Velhos!":pontos==pontos_adversario?"Nosso time está EMPATADO com o Livros Velhos!":"Nosso time está PIOR que o Livros Velhos!");
+</script>
